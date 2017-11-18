@@ -5,12 +5,12 @@ import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team4859.robot.Robot;
 
 /**
- *
+ * This class is called by the "fullSpeed" button and calls methods in the drivetrain subsystem
  */
-public class ExampleCommand extends Command {
-	public ExampleCommand() {
+public class DrivetrainForward extends Command {
+	public DrivetrainForward() {
 		// Use requires() here to declare subsystem dependencies
-		requires(Robot.exampleSubsystem);
+		requires(Robot.drivetrain);
 	}
 
 	// Called just before this Command runs the first time
@@ -21,6 +21,7 @@ public class ExampleCommand extends Command {
 	// Called repeatedly when this Command is scheduled to run
 	@Override
 	protected void execute() {
+		Robot.drivetrain.drivetrainForward();
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
@@ -32,11 +33,13 @@ public class ExampleCommand extends Command {
 	// Called once after isFinished returns true
 	@Override
 	protected void end() {
+		Robot.drivetrain.drivetrainStop();
 	}
 
 	// Called when another command which requires one or more of the same
 	// subsystems is scheduled to run
 	@Override
 	protected void interrupted() {
+		Robot.drivetrain.drivetrainStop();
 	}
 }
