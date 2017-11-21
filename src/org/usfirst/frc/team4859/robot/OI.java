@@ -14,7 +14,7 @@ import org.usfirst.frc.team4859.robot.commands.DrivetrainStop;
 public class OI {
 	Joystick joystickP0 = new Joystick(0);
 	
-	Button fullSpeed = new JoystickButton(joystickP0, 5);
+	Button fullSpeed = new JoystickButton(joystickP0, 1);
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.

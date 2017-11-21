@@ -12,7 +12,7 @@ public class Drivetrain extends Subsystem {
 	
 	// Creating Talon motor objects
 	Talon motor1 = new Talon(0);
-	Talon motor2 = new Talon(1);
+	//Talon motor2 = new Talon(1);
 
 	public void initDefaultCommand() {
 		// Set the default command for a subsystem here.
@@ -21,13 +21,13 @@ public class Drivetrain extends Subsystem {
 	
 	public void drivetrainForward() {
 		// Tells motors to go forward at max speed
-		motor1.set(1);
-		motor2.set(1);
+		motor1.set(0.5);
+		//motor2.set(0.25);
 	}
 
 	public void drivetrainStop() {
 		// Tells motors to stop
 		motor1.set(0);
-		motor2.set(0);
+		//motor2.set(0);
 	}
 }
